@@ -60,8 +60,7 @@ export function Footer() {
 
       <div className="mx-auto mt-12 w-full max-w-6xl border-t border-glass-border px-5 pt-6 sm:px-8">
         <p className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} {profile.name}. Designed and built with React, TypeScript and
-          Tailwind CSS.
+          © {new Date().getFullYear()} {profile.name}.
         </p>
       </div>
     </footer>

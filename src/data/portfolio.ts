@@ -32,8 +32,8 @@ export const socials = [
 ];
 
 export const stats = [
-  { label: "Projects delivered", value: 42, suffix: "+" },
-  { label: "Years of experience", value: 6, suffix: "" },
+  { label: "Projects delivered", value: 11, suffix: "+" },
+  { label: "Years of experience", value: 3, suffix: "" },
   { label: "Happy clients", value: 28, suffix: "+" },
   { label: "Uptime maintained", value: 99, suffix: "%" },
 ];
@@ -120,6 +120,33 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Golden Plate — Restaurant",
+    summary:
+      "Restaurant website for a wood-fired pizza and Malawian grill spot in Lilongwe, with menu showcases and online table reservations.",
+    tags: ["React", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/Tee5254",
+    demo: "https://goldenplate-magic.lovable.app",
+    accent: "from-amber-500/25 to-transparent",
+  },
+  {
+    title: "Malawi Chic Style",
+    summary:
+      "Online clothing store showcasing curated fashion collections with a smooth browsing and shopping experience.",
+    tags: ["React", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/Tee5254",
+    demo: "https://malawi-chic-style.lovable.app/",
+    accent: "from-pink-400/25 to-transparent",
+  },
+  {
+    title: "Kwacha Wheels Hub",
+    summary:
+      "Online car hire platform for browsing available vehicles and managing bookings with a clean, modern interface.",
+    tags: ["React", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/Tee5254",
+    demo: "https://kwacha-wheels-hub.lovable.app/",
+    accent: "from-blue-400/25 to-transparent",
+  },
+  {
     title: "FinVerse — Finance Platform",
     summary:
       "Personal finance web app for tracking budgets, expenses and savings goals with a clean, responsive dashboard.",
@@ -190,15 +217,6 @@ export const projects: Project[] = [
     github: "https://github.com/Tee5254",
     demo: "https://valentinomolo.vercel.app/",
     accent: "from-rose-400/20 to-transparent",
-  },
-  {
-    title: "Golden Plate — Restaurant",
-    summary:
-      "Restaurant website for a wood-fired pizza and Malawian grill spot in Lilongwe, with menu showcases and online table reservations.",
-    tags: ["React", "TypeScript", "Tailwind CSS"],
-    github: "https://github.com/Tee5254",
-    demo: "https://goldenplate-magic.lovable.app",
-    accent: "from-amber-500/25 to-transparent",
   },
 ];
 

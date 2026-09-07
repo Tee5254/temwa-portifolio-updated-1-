@@ -53,7 +53,7 @@ export function About() {
       <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
         <Reveal className="space-y-5 text-base leading-relaxed text-muted-foreground">
           <p>
-            I'm a software engineer with six years of experience building web platforms, APIs and
+            I'm a software engineer with three years of experience building web platforms, APIs and
             internal tools. My work sits where thoughtful interface design meets solid backend
             engineering — interfaces that feel effortless, backed by systems that hold up under
             load.
