@@ -83,7 +83,7 @@ export function Hero() {
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
             className="absolute -bottom-10 -left-6 hidden rounded-2xl bg-card/90 border border-glass-border backdrop-blur-md px-5 py-4 lg:block"
           >
-            <p className="font-display text-2xl font-semibold text-gradient">6+ yrs</p>
+            <p className="font-display text-2xl font-semibold text-gradient">3+ yrs</p>
             <p className="text-xs text-muted-foreground">building for the web</p>
           </motion.div>
         </motion.div>
