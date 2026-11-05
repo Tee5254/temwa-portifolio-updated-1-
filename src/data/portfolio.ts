@@ -147,33 +147,6 @@ export const projects: Project[] = [
     accent: "from-blue-400/25 to-transparent",
   },
   {
-    title: "FinVerse — Finance Platform",
-    summary:
-      "Personal finance web app for tracking budgets, expenses and savings goals with a clean, responsive dashboard.",
-    tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
-    github: "https://github.com/Tee5254",
-    demo: "https://fin-verse-three.vercel.app",
-    accent: "from-cyan-400/25 to-transparent",
-  },
-  {
-    title: "Vision Threads Enterprises",
-    summary:
-      "Business website for a fashion and apparel brand with product showcases and enquiry flows.",
-    tags: ["React", "Tailwind CSS", "Vercel"],
-    github: "https://github.com/Tee5254",
-    demo: "https://visionthreadsenterprises.vercel.app",
-    accent: "from-amber-300/25 to-transparent",
-  },
-  {
-    title: "DigitAll — Digital Agency",
-    summary:
-      "Marketing site for a digital services agency with service pages, animations and lead capture.",
-    tags: ["React", "TypeScript", "Framer Motion"],
-    github: "https://github.com/Tee5254",
-    demo: "https://digitall-ruby.vercel.app",
-    accent: "from-sky-400/25 to-transparent",
-  },
-  {
     title: "CodeAxis Tech Solutions",
     summary:
       "Company website for a software solutions provider, presenting services, portfolio and contact flows.",
@@ -210,13 +183,13 @@ export const projects: Project[] = [
     accent: "from-amber-400/25 to-transparent",
   },
   {
-    title: "Valentino Molo — Portfolio",
+    title: "Mamma Mia — Italian Restaurant",
     summary:
-      "Personal portfolio site for a creative professional, featuring projects, bio and contact integration.",
-    tags: ["React", "Framer Motion", "Vercel"],
+      "Website for an Italian restaurant in Lilongwe with full food and bar menus, promotions, gallery and an admin dashboard for managing content.",
+    tags: ["TypeScript", "Tailwind CSS", "Supabase"],
     github: "https://github.com/Tee5254",
-    demo: "https://valentinomolo.vercel.app/",
-    accent: "from-rose-400/20 to-transparent",
+    demo: "https://mammamiamw.com",
+    accent: "from-red-500/25 to-transparent",
   },
 ];
 
