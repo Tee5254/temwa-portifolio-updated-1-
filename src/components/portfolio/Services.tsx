@@ -1,23 +1,58 @@
+import { useState } from "react";
 import { Check } from "lucide-react";
 
-import { pricing } from "@/data/portfolio";
+import { defaultPricingCategory, maintenance, paymentTerms, pricingCategories } from "@/data/portfolio";
 import { Section, Reveal } from "./Section";
 
 export function Services() {
+  const [activeId, setActiveId] = useState<string>(defaultPricingCategory.id);
+  const active = pricingCategories.find((c) => c.id === activeId) ?? defaultPricingCategory;
+  const showTerms = active.id !== "websites";
+
   return (
     <Section
       id="services"
-      eyebrow="Web & App Development"
+      eyebrow="Web, Systems & App Development"
       title={
         <>
           Packages built for <span className="text-gradient">your business</span>
         </>
       }
-      description="Transparent pricing for websites and web applications — pick a package and we start building."
+      description="Transparent pricing for websites, business management systems and mobile apps — pick a package and we start building."
     >
+      <div
+        role="tablist"
+        aria-label="Package categories"
+        className="mb-8 flex flex-wrap gap-2"
+      >
+        {pricingCategories.map((category) => {
+          const selected = category.id === active.id;
+          return (
+            <button
+              key={category.id}
+              type="button"
+              role="tab"
+              aria-selected={selected}
+              onClick={() => setActiveId(category.id)}
+              className={
+                "rounded-full px-5 py-2 text-sm font-semibold transition-colors " +
+                (selected
+                  ? "text-primary-foreground"
+                  : "border border-glass-border bg-surface text-muted-foreground hover:border-primary/50 hover:text-primary")
+              }
+              style={selected ? { background: "var(--gradient-brand)" } : undefined}
+            >
+              {category.label}
+            </button>
+          );
+        })}
+      </div>
+
+      <p className="mb-8 max-w-2xl text-sm text-muted-foreground">{active.intro}</p>
+
       <div className="grid gap-5 lg:grid-cols-3">
-        {pricing.map((tier, i) => (
-          <Reveal key={tier.name} delay={i * 0.06}>
+        {active.tiers.map((tier, i) => (
+          <Reveal key={`${active.id}-${tier.name}`} delay={i * 0.06}>
             <article
               className={
                 "relative flex h-full flex-col rounded-2xl glass p-7 transition-all hover:-translate-y-1 hover:border-primary/40" +
@@ -34,6 +69,7 @@ export function Services() {
               )}
               <h3 className="text-lg font-semibold">{tier.name}</h3>
               <p className="mt-3 font-display text-3xl font-semibold text-gradient">{tier.price}</p>
+              <p className="mt-3 text-sm text-muted-foreground">{tier.description}</p>
               <ul className="mt-6 grid flex-1 content-start gap-3">
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2.5 text-sm text-muted-foreground">
@@ -57,6 +93,23 @@ export function Services() {
           </Reveal>
         ))}
       </div>
+
+      {(active.note || showTerms) && (
+        <div className="mt-8 grid gap-3 text-xs text-muted-foreground">
+          {active.note && <p>{active.note}</p>}
+          {showTerms && (
+            <>
+              <p>
+                <span className="font-semibold text-foreground">{maintenance.title}:</span>{" "}
+                {maintenance.text}
+              </p>
+              <p>
+                <span className="font-semibold text-foreground">Payment terms:</span> {paymentTerms}
+              </p>
+            </>
+          )}
+        </div>
+      )}
     </Section>
   );
 }
