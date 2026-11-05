@@ -70,6 +70,9 @@ export function Services() {
               <h3 className="text-lg font-semibold">{tier.name}</h3>
               <p className="mt-3 font-display text-3xl font-semibold text-gradient">{tier.price}</p>
               <p className="mt-3 text-sm text-muted-foreground">{tier.description}</p>
+              <p className="mt-3 text-xs text-muted-foreground">
+                <span className="font-semibold text-foreground">Best for:</span> {tier.bestFor}
+              </p>
               <ul className="mt-6 grid flex-1 content-start gap-3">
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2.5 text-sm text-muted-foreground">

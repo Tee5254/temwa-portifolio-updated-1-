@@ -197,6 +197,7 @@ export type PricingTier = {
   name: string;
   price: string;
   description: string;
+  bestFor: string;
   features: string[];
   highlighted?: boolean;
 };
@@ -215,6 +216,7 @@ const websitePackages: PricingTier[] = [
     price: "MWK 250,000",
     description:
       "A clean, professional online presence for small businesses that want to be found and contacted quickly.",
+    bestFor: "Small businesses, startups and individuals who need a simple, professional web presence.",
     features: [
       "3–5 pages",
       "Responsive design",
@@ -231,6 +233,7 @@ const websitePackages: PricingTier[] = [
     highlighted: true,
     description:
       "A fully custom website with booking forms and a content admin, ideal for businesses that update their site regularly.",
+    bestFor: "Growing businesses that want bookings, enquiries and an easy way to manage their own content.",
     features: [
       "Everything in Basic",
       "5–8 pages",
@@ -247,6 +250,7 @@ const websitePackages: PricingTier[] = [
     price: "MWK 1,200,000",
     description:
       "A complete web application with user accounts, bookings and payments for businesses that want to operate online.",
+    bestFor: "Established businesses that want to sell, take bookings or serve customers online.",
     features: [
       "Everything in Standard",
       "Custom web application",
@@ -263,105 +267,118 @@ const websitePackages: PricingTier[] = [
 
 const systemPackages: PricingTier[] = [
   {
-    name: "Basic POS System",
+    name: "Starter System",
     price: "MWK 2,000,000",
     description:
-      "Everything a restaurant or shop needs to take orders, bill customers and record sales, with tax-compliant invoicing built in.",
+      "The core of a custom business system: record sales, manage customers and staff, issue invoices and see how the business is doing, all in one place.",
+    bestFor:
+      "Shops, salons, clinics, schools and small businesses moving from paper or spreadsheets to software.",
     features: [
-      "Modern Point of Sale interface",
-      "Table and waiter management",
-      "Menu and product management",
-      "Order processing and billing",
-      "Cash, mobile money and card recording",
-      "Receipt generation",
+      "Modern dashboard and sales interface",
+      "Customer and client records",
+      "Product or service catalogue",
+      "Sales, billing and invoicing",
+      "Cash, mobile money and card payment recording",
+      "Receipt and invoice generation",
       "Staff accounts and permissions",
       "MRA EIS integration",
       "Basic sales reports",
-      "Installation and configuration",
+      "Centralised database, installation and setup",
     ],
   },
   {
-    name: "Professional Management System",
+    name: "Professional System",
     price: "MWK 3,500,000",
     highlighted: true,
     description:
-      "Adds kitchen tracking, stock control and financial reporting so you can run the whole operation from one dashboard.",
+      "Everything in Starter, plus the tools to control stock, suppliers, expenses and day-to-day workflow, with management reporting you can act on.",
+    bestFor:
+      "Businesses with stock, suppliers or teams to manage that need full visibility of daily operations.",
     features: [
-      "Everything in Basic POS",
-      "Kitchen Display System (KDS)",
-      "Real-time kitchen order tracking",
-      "Advanced inventory and stock tracking",
+      "Everything in Starter",
+      "Industry-specific modules built around your workflow",
+      "Real-time order, job or task tracking",
+      "Inventory and stock tracking",
       "Supplier management",
       "Expense tracking",
       "Advanced sales and financial reports",
       "Management dashboard",
-      "Deployment and staff training",
+      "Secure backend, deployment and staff training",
     ],
   },
   {
-    name: "Enterprise Management System",
+    name: "Enterprise System",
     price: "MWK 4,500,000",
     description:
-      "Built for growing businesses that want to understand food costs and profit, reduce wastage and manage multiple branches.",
+      "Everything in Professional, plus multi-branch control, costing and profitability analysis and deeper customisation for businesses at scale.",
+    bestFor:
+      "Multi-branch or fast-growing businesses that need profit analysis, tighter control and a system shaped to their operations.",
     features: [
       "Everything in Professional",
-      "Recipe and ingredient costing",
-      "Food cost and profitability analysis",
-      "Stock wastage monitoring",
+      "Multiple branch management",
+      "Product and service costing",
+      "Profitability analysis",
+      "Stock loss and wastage monitoring",
       "Advanced financial analytics",
       "Detailed business performance reports",
-      "Multiple branch management",
       "Advanced employee management",
       "Extended system customisation",
+      "Advanced operational monitoring",
     ],
   },
 ];
 
 const appPackages: PricingTier[] = [
   {
-    name: "Customer Ordering App",
+    name: "Customer App",
     price: "MWK 1,200,000",
     description:
-      "Lets your customers browse the menu, order for delivery or collection and track their orders from their phone.",
+      "A customer-facing Android app linked to your system, so customers can browse what you offer, order or book, pay and follow their status from their phone.",
+    bestFor:
+      "Businesses that want to sell or take bookings directly through their own branded app.",
     features: [
       "Customer registration and login",
-      "Digital menu with images and prices",
-      "Shopping cart and online ordering",
+      "Catalogue of your products or services",
+      "Cart, ordering or booking",
       "Delivery and collection options",
       "Order status tracking and history",
       "Push notifications",
-      "POS integration",
+      "Integration with your business system",
       "Android app with Google Play publishing",
     ],
   },
   {
-    name: "Management & Inventory App",
+    name: "Business Management App",
     price: "MWK 1,000,000",
     description:
-      "Puts stock, expenses and sales in the owner's pocket, with alerts when items run low.",
+      "An owner and manager Android app linked to your system, so you can monitor sales, stock and expenses from anywhere and get alerted when something needs attention.",
+    bestFor:
+      "Owners and managers who want to run and monitor the business on the go.",
     features: [
       "Management dashboard",
-      "Stock and ingredient management",
+      "Sales and performance reports",
+      "Stock and inventory monitoring",
       "Stock additions and adjustments",
       "Supplier and purchase recording",
       "Low-stock notifications",
       "Expense recording",
-      "Sales and performance reports",
       "Android app with Google Play publishing",
     ],
   },
   {
-    name: "Complete Mobile App Suite",
+    name: "Complete App Suite",
     price: "MWK 2,000,000",
     highlighted: true,
     description:
-      "Both apps on one shared backend, so customer orders, stock and sales stay in sync with your POS system.",
+      "Both apps together on one shared backend, so customer activity and business data stay in sync, with the Customer App and Business Management App priced below buying them separately.",
+    bestFor:
+      "Businesses that want customers and management connected end to end.",
     features: [
-      "Customer Ordering App",
-      "Management & Inventory App",
+      "Customer App and Business Management App",
       "Shared backend and database",
-      "User authentication",
-      "Data synchronisation",
+      "User authentication and roles",
+      "Real-time data synchronisation",
+      "Integration with your business system",
       "Testing and deployment",
       "Google Play publishing for both apps",
     ],
@@ -381,16 +398,16 @@ export const pricingCategories: PricingCategory[] = [
     id: "systems",
     label: "Business Systems",
     intro:
-      "Centralised software to run your restaurant or shop day to day, from sales and kitchen to stock and finances.",
+      "Custom software that runs your business day to day, from sales and customers to stock, staff and finances, built around how you work.",
     note:
-      "Backend and integration costs are assessed per package combination to avoid duplicate charges. Hardware, hosting, SMS, payment gateway and MRA certification fees are not included.",
+      "Backend and integration costs are assessed per package combination to avoid duplicate charges. Hardware, hosting, SMS, payment gateway and MRA certification fees are not included. Data migration from an existing system is assessed before implementation.",
     tiers: systemPackages,
   },
   {
     id: "apps",
     label: "Mobile Apps",
     intro:
-      "Dedicated Android apps connected to your management system through a central backend.",
+      "Dedicated Android apps for your customers and your team, connected to your business system through a central backend.",
     note:
       "Google Play developer account fees are not included. Publication is subject to Google's review.",
     tiers: appPackages,
